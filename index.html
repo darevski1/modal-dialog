@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <dialog>
+      <div class="dialog-container">
+        <img src="logo.png" alt="" >
+        <h3>Еуроимпекс објавува слободна работна позиција магационер/магацински работник. За повеќе детали за огласот кликнете превземи оглас</h3>
+        <a href="CamScanner 04-01-2022 09.01.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> (превземи оглас - PDF)</a>
+      </div>
+      <form method="dialog">
+        <button class="close-modal" value="cancel">Продолжи кон Еуроимпекс</button>
+      </form>
+    </dialog>
+ 
+
+    <script>
+        
+        const openModal = document.querySelector('.open-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const apply = document.querySelector('.apply');
+        const dialog = document.querySelector('dialog');
+        const output = document.querySelector('output');
+
+        window.onload = (event) => {
+           dialog.showModal();
+        };
+
+    
+        function closeOpenedWindow() {
+            dialog.close();
+        }
+        setTimeout(closeOpenedWindow, 50200);
+
+         
+
+        dialog.addEventListener('close', () => {
+        output.value = dialog.returnValue;
+        });
+    </script>
+</body>
+</html>
